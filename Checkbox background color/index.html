@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Checkbox Background</title>
+    <style>
+        /* Style the default checkbox */
+        input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            background-color: #fff8ec;
+            border: 1px solid #AFA192;
+            border-radius: 2px;
+            cursor: pointer;
+            appearance: none; /* For most browsers */
+            -webkit-appearance: none; /* For Safari */
+            -moz-appearance: none; /* For Firefox */
+            display: inline-block;
+            position: relative;
+        }
+
+        /* Change accent color when checkbox is checked */
+        input[type="checkbox"]:checked {
+            background-color: #553E23;
+            border-color: #553E23;
+        }
+
+        /* Display default checkmark when checkbox is checked */
+        input[type="checkbox"]:checked::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox">
+        Option
+    </label>
+</body>
+</html>
